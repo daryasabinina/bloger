@@ -3,4 +3,101 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-@import "no.scss";
+@import "sass/_variables.scss";
+@import "sass/_mixins.scss";
+
+
+.logo img {
+  margin: $center;
+  padding: $logoPadding;
+  display: block;
+}
+
+nav {
+  background-color: $menuBackground;
+  border-bottom: 3px solid $menuBorder;
+  margin: 0;
+  padding: 0;
+  ul {
+    margin: $center;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      position: relative;
+      padding: 3px;
+      a {
+        display: block;
+        padding: 17px 32px 14px 32px;
+        font: $menuTypo;
+        font-stretch: ultra-condensed;
+        color: $white;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $whiteShadow;
+          color: $white;
+          text-decoration: none;
+        }
+      }
+      &.active:before {
+        @include triangle(down, 11px, $menuBorder);
+        position: absolute;
+        content: "";
+        top: 62px;
+        left: 41%;
+      }
+      &.active:after {
+        @include triangle(down, 9px, $menuBackground);
+        position: absolute;
+        content: "";
+        top: 59px;
+        left: 43%;
+      }
+    }
+  }
+}
+
+.container {
+  margin-top: 50px;
+  color: $lightgrey;
+  .img img {
+    width: $fullpage;
+  }
+  h2 {
+    font: $menuTypo;
+    font-size: 24px;
+  }
+  .info {
+    border-top: $infoBorder;
+    border-bottom: $infoBorder;
+    padding: 10px 0;
+    overflow: hidden;
+    font-size: 12px;
+    .left {
+      float: left;
+      .time:before, .author:before {
+        height: $iconSize;
+        width: $iconSize;
+        content: "";
+        position: absolute;
+      }
+      .time:before {
+        background-image: url('images/sprite/time.png');
+      }
+      .time:before {
+        background-image: url('images/sprite/trace.png');
+      }
+    }
+    .right {
+      float: right;
+      .social {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+      }
+    }
+    }
+
+  }
+}
