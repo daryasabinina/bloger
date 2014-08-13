@@ -71,21 +71,28 @@ nav {
     border-top: $infoBorder;
     border-bottom: $infoBorder;
     padding: 10px 0;
+    margin-bottom: 15px;
     overflow: hidden;
     font-size: 12px;
     .left {
       float: left;
+      .time, .author {
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+      }
       .time:before, .author:before {
-        height: $iconSize;
-        width: $iconSize;
+        height: $iconSizeH;
+        width: $iconSizeW;
         content: "";
         position: absolute;
+        left: 4px;
       }
       .time:before {
-        background-image: url('images/sprite/time.png');
+        background-image: url('../images/sprite/time.png');
       }
-      .time:before {
-        background-image: url('images/sprite/trace.png');
+      .author:before {
+        background-image: url('../images/sprite/trace.png');
       }
     }
     .right {
@@ -93,11 +100,58 @@ nav {
       .social {
       margin: 0;
       padding: 0;
+        height: 25px;
       li {
         display: inline-block;
+        width: 50px;
+        height: 25px;
+        &.facebook {
+          background: url("../images/sprite/social.png") -4px -1px no-repeat ;
+
+        }
+        &.google {
+          background: url("../images/sprite/social.png") -58px -1px no-repeat ;
+          width: 42px;
+        }
+        &.twitter {
+          background: url("../images/sprite/social.png") -105px -1px no-repeat ;
+
+        }
+        &.vk {
+          background: url("../images/sprite/social.png") -160px -1px no-repeat ;
+
+        }
+        &.ya {
+          background: url("../images/sprite/social.png") -215px -1px no-repeat ;
+
+        }
       }
     }
     }
 
+  }
+  aside {
+    h3 {
+      margin-top: 0;
+      border-bottom: 5px solid $blue;
+      padding-left: 35px;
+      &:before {
+        content: "";
+        height: 30px;
+        width: 30px;
+        background-color: $blue;
+        position: absolute;
+        left: 15px;
+        color: $white;
+        text-align: center;
+        padding-top: 5px;
+      }
+    }
+    & .qu h3:before {
+      content: "?";
+    }
+    & .an h3:before {
+      content: "!";
+    }
   }
 }
