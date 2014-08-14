@@ -9,14 +9,27 @@
  */
 angular.module('blogerApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
+    $scope.posts = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+  })
+  .controller('SongListCtrl', function ($http) {
+        var store = this;
+        store.posts = [];
+        $http.get('posts.json').success(function(data) {
+            store.posts = data;
+        });
 
-angular.module('myModule', ['ui.bootstrap'])
+        this.post = {};
+    });
+
+
+
+
+
+/*angular.module('myModule', ['ui.bootstrap'])
     .controller('ModalDemoCtrl', function ($scope, $modal, $log) {
 
     $scope.items = ['item1', 'item2', 'item3'];
@@ -60,4 +73,4 @@ angular.module('myModule', ['ui.bootstrap'])
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
-});
+});  */
