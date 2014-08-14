@@ -67,6 +67,9 @@ nav {
     font: $menuTypo;
     font-size: 24px;
   }
+  label {
+    width: 100%;
+  }
   .info {
     border-top: $infoBorder;
     border-bottom: $infoBorder;

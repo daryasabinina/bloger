@@ -8,23 +8,32 @@
  * Controller of the blogerApp
  */
 angular.module('blogerApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.posts = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  })
-  .controller('SongListCtrl', function ($http) {
+  .controller('Posting', function ($http) {
         var store = this;
         store.posts = [];
         $http.get('posts.json').success(function(data) {
             store.posts = data;
         });
-
         this.post = {};
     });
+angular.module('blogerApp')
+    .controller('NewPosting', function ($scope) {
+        $scope.texts =[];
+        $scope.addPost = function () {
+            $scope.texts.push($scope.text);
+        };
+    });
 
+angular.module('blogerApp')
+    .controller('popup',function ($scope) {
+        $scope.class = 'out';
+        $scope.addClass = function () {
+            if ( $scope.class === 'out' )
+                $scope.class = 'in';
+            else
+                $scope.class = 'out';
+        };
+    });
 
 
 

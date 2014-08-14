@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Blog</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -20,103 +20,80 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <main>
+    <main ng-controller="popup">
         <header>
             <div class="logo">
                 <img src="images/logo.png">
             </div>
             <nav>
-            <ul>
-                <li>
-                    <a href="#">JavaScript</a>
-                </li>
-                <li>
-                    <a href="#">CSS</a>
-                </li>
-                <li class="active">
-                    <a href="#">Latest</a>
-                </li>
-                <li>
-                    <a href="#">HTML</a>
-                </li>
-                <li>
-                    <!--<div ng-controller="ModalDemoCtrl">
-                        <script type="text/ng-template" id="myModalContent.html">
-                            <div class="modal-header">
-                                <h3 class="modal-title">I'm a modal!</h3>
-                            </div>
-                            <div class="modal-body">
-                                <ul>
-                                    <li ng-repeat="item in items">
-                                        <a ng-click="selected.item = item">{{ item }}</a>
-                                    </li>
-                                </ul>
-                                Selected: <b>{{ selected.item }}</b>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-primary" ng-click="ok()">OK</button>
-                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                            </div>
-                        </script>
-                    <button class="btn btn-default" ng-click="open()">New Post</button>
-                        </div>-->
-                </li>
-            </ul>
+                <ul>
+                    <li>
+                        <a href="#">JavaScript</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Latest</a>
+                    </li>
+                    <li>
+                        <a href="#">HTML</a>
+                    </li>
+                    <li>
+                       <button class="btn btn-default" ng-click="addClass">New Post</button>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <div class="container">
-            <div class="col-md-8" ng-controller="SongListCtrl as main">
+        <div class="container" >
+            <div id="myModal" class="modal fade" ng-class="out" style="display: block;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close">×<span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">New post</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form name="PostForm" ng-submit="addPost()">
+                                <p><label> Your name: <input type="text" class="form-control" required></label></p>
+                                <p><label> Image: <input type="file"></label></p>
+                                <p><label> Title: <input type="text" class="form-control" required></label></p>
+                                <p><label> Text: <textarea class="form-control" required></textarea></label></p>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
+            <div class="col-md-8" ng-controller="Posting as main">
                 <article ng-repeat="post in main.posts | limitTo: 5">
-                    <div>
+                    <div class="img">
                         <img ng-src="{{post.imageSource}}">
                     </div>
-                    <h3>
-                        <a href="#">{{post.title}}</a>
-                    </h3>
-                    <div class="articleInfo">
-                        <time>{{post.date.$date | date:'yyyy-MM-dd HH:mm'}}</time>
-                        <div class="author">{{post.author}}</div>
-                        <div class="social">
-                            <a href="#" class="fb">16</a>
-                            <a href="#" class="goo">7</a>
-                            <a href="#" class="twi">15</a>
-                            <a href="#" class="vk">16</a>
-                            <a href="#" class="ya">1</a>
-                        </div>
-                    </div>
-                    <p ng-bind-html="post.body | limitTo: 700"></p>
-                </article>
-                <article>
-                    <div class="img">
-                        <img src="images/post.jpg">
-                    </div>
                     <h2>
-                        Blogotitle of blogopost about blogoflowers
+                        {{post.title}}
                     </h2>
                     <div class="info">
-                    <div class="left">
-                        <span class="time">
-                            22:58 Jan 01, 2014
-                        </span>
-                        <span class="author">
-                            by E. Hyperraccoon
-                        </span>
-                    </div>
-                    <div class="right">
-                        <ul class="social">
-                            <li class="facebook"></li>
-                            <li class="google"></li>
-                            <li class="twitter"></li>
-                            <li class="vk"></li>
-                            <li class="ya"></li>
-                        </ul>
-                    </div>
+                        <div class="left">
+                        <span class="time">{{post.date | date:'yyyy-MM-dd HH:mm'}}</span>
+                        <span class="author">{{post.author}}</span>
+                            </div>
+                        <div class="right">
+                            <ul class="social">
+                                <li class="facebook"></li>
+                                <li class="google"></li>
+                                <li class="twitter"></li>
+                                <li class="vk"></li>
+                                <li class="ya"></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="content">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
+                    <p ng-bind-html="post.body | limitTo: 700"></p>
+                        </div>
                 </article>
             </div>
             <aside class="col-md-4">
@@ -189,7 +166,6 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>
 </html>
