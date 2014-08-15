@@ -8,33 +8,32 @@
  * Controller of the blogerApp
  */
 angular.module('blogerApp')
-  .controller('Posting', function ($http) {
-        var store = this;
-        store.posts = [];
+  .controller('NewPosting', function ($http, $scope) {
+        $scope.posts = [];
         $http.get('posts.json').success(function(data) {
-            store.posts = data;
+            $scope.posts = data;
         });
-        this.post = {};
-    });
-angular.module('blogerApp')
-    .controller('NewPosting', function ($scope) {
-        $scope.texts =[];
+        $scope.post = {};
+
+        $scope.wantWritePost = '';
+        console.log($scope.wantWritePost);
+        $scope.wantWrite = function () {
+            console.log($scope.wantWritePost);
+            if ( $scope.wantWritePost === $scope.wantWritePost ) {
+                $scope.wantWritePost = !$scope.wantWritePost; }
+            else {
+                $scope.wantWritePost = $scope.wantWritePost;}
+            console.log($scope.wantWritePost);
+
+        };
+
+        $scope.texts = [];
         $scope.addPost = function () {
             $scope.texts.push($scope.text);
+            $scope.text='';
+            $scope.wantWritePost = $scope.wantWritePost;
         };
     });
-
-angular.module('blogerApp')
-    .controller('popup',function ($scope) {
-        $scope.class = 'out';
-        $scope.addClass = function () {
-            if ( $scope.class === 'out' )
-                $scope.class = 'in';
-            else
-                $scope.class = 'out';
-        };
-    });
-
 
 
 

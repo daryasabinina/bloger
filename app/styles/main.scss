@@ -70,6 +70,9 @@ nav {
   label {
     width: 100%;
   }
+  .out {
+    z-index: 0;
+  }
   .info {
     border-top: $infoBorder;
     border-bottom: $infoBorder;

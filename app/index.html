@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="blogerApp">
   <head>
     <meta charset="utf-8">
     <title>Blog</title>
@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="blogerApp">
+  <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <main ng-controller="popup">
+    <main ng-controller="NewPosting">
         <header>
             <div class="logo">
                 <img src="images/logo.png">
@@ -40,36 +40,52 @@
                         <a href="#">HTML</a>
                     </li>
                     <li>
-                       <button class="btn btn-default" ng-click="addClass">New Post</button>
+                       <button class="btn btn-default" ng-click="wantWrite()">New Post</button>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div class="container" >
-            <div id="myModal" class="modal fade" ng-class="out" style="display: block;">
+        <div class="container">
+            <div id="myModal" class="modal fade in" ng-show="wantWritePost" style="display: block;">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close">×<span class="sr-only">Close</span></button>
+                            <button type="button" class="close" ng-click="wantWrite()">×<span class="sr-only">Close</span></button>
                             <h4 class="modal-title" id="myModalLabel">New post</h4>
                         </div>
                         <div class="modal-body">
-                            <form name="PostForm" ng-submit="addPost()">
-                                <p><label> Your name: <input type="text" class="form-control" required></label></p>
-                                <p><label> Image: <input type="file"></label></p>
-                                <p><label> Title: <input type="text" class="form-control" required></label></p>
-                                <p><label> Text: <textarea class="form-control" required></textarea></label></p>
+                            <form name="PostForm" role="form" ng-submit="addPost()" novalidate>
+                                <p ng-class="{'has-error': PostForm.author.$invalid, 'has-succes': !PostForm.author.$invalid,}">
+                                    <label> Your name:
+                                        <input type="text" name="author" class="form-control" ng-model="text.author" required>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label> Image:
+                                        <input type="file" name="img" ng-model="text.img">
+                                    </label>
+                                </p>
+                                <p ng-class="{'has-error': PostForm.title.$invalid, 'has-succes': !PostForm.title.$invalid,}">
+                                    <label> Title:
+                                        <input type="text" name="title" class="form-control" ng-model="text.title" required>
+                                    </label>
+                                </p>
+                                <p ng-class="{'has-error': PostForm.text.$invalid, 'has-succes': !PostForm.text.$invalid,}">
+                                    <label> Text:
+                                        <textarea class="form-control" name="text" ng-model="text.article" required></textarea>
+                                    </label>
+                                </p>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-default" ng-click="addPost()">Close</button>
+                                    <button type="submit" class="btn btn-primary" ng-disabled="PostForm.$invalid" ng-click="wantWrite()">Save changes</button>
                                 </div>
                             </form>
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
             </div>
-            <div class="col-md-8" ng-controller="Posting as main">
-                <article ng-repeat="post in main.posts | limitTo: 5">
+            <div class="col-md-8">
+                <article ng-repeat="post in posts | limitTo: 5">
                     <div class="img">
                         <img ng-src="{{post.imageSource}}">
                     </div>
@@ -95,6 +111,15 @@
                     <p ng-bind-html="post.body | limitTo: 700"></p>
                         </div>
                 </article>
+                <p>
+                <article ng-repeat="text in texts">
+                    <div class="img">
+                    </div>
+                    <h2>
+                        {{text.author}}
+                    </h2>
+                </article>
+                </p>
             </div>
             <aside class="col-md-4">
                 <div class="qu">
