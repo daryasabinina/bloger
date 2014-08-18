@@ -16,19 +16,17 @@ angular.module('blogerApp')
         $scope.post = {};
 
         $scope.wantWritePost = '';
-        console.log($scope.wantWritePost);
         $scope.wantWrite = function () {
-            console.log($scope.wantWritePost);
             if ( $scope.wantWritePost === $scope.wantWritePost ) {
                 $scope.wantWritePost = !$scope.wantWritePost; }
             else {
                 $scope.wantWritePost = $scope.wantWritePost;}
-            console.log($scope.wantWritePost);
-
         };
 
         $scope.texts = [];
         $scope.addPost = function () {
+            $scope.text.date = {};
+            $scope.text.date.$date = Date.now();
             $scope.texts.push($scope.text);
             $scope.text='';
             $scope.wantWritePost = $scope.wantWritePost;

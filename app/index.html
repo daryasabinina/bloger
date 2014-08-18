@@ -62,7 +62,7 @@
                                 </p>
                                 <p>
                                     <label> Image:
-                                        <input type="file" name="img" ng-model="text.img">
+                                        <input type="url" name="img" ng-model="text.img" class="form-control">
                                     </label>
                                 </p>
                                 <p ng-class="{'has-error': PostForm.title.$invalid, 'has-succes': !PostForm.title.$invalid,}">
@@ -70,9 +70,9 @@
                                         <input type="text" name="title" class="form-control" ng-model="text.title" required>
                                     </label>
                                 </p>
-                                <p ng-class="{'has-error': PostForm.text.$invalid, 'has-succes': !PostForm.text.$invalid,}">
+                                <p ng-class="{'has-error': PostForm.text.$invalid, 'has-succes': !PostForm.text.$invalid}">
                                     <label> Text:
-                                        <textarea class="form-control" name="text" ng-model="text.article" required></textarea>
+                                        <textarea class="form-control" name="article" ng-model="text.article" required></textarea>
                                     </label>
                                 </p>
                                 <div class="modal-footer">
@@ -85,7 +85,7 @@
                 </div><!-- /.modal-dialog -->
             </div>
             <div class="col-md-8">
-                <article ng-repeat="post in posts | limitTo: 5">
+                <article ng-repeat="post in posts">
                     <div class="img">
                         <img ng-src="{{post.imageSource}}">
                     </div>
@@ -108,17 +108,36 @@
                         </div>
                     </div>
                     <div class="content">
-                    <p ng-bind-html="post.body | limitTo: 700"></p>
+                    <p ng-bind-html="post.body"></p>
                         </div>
                 </article>
                 <p>
-                <article ng-repeat="text in texts">
-                    <div class="img">
-                    </div>
-                    <h2>
-                        {{text.author}}
-                    </h2>
-                </article>
+                    <article ng-repeat="text in texts">
+                        <div class="img">
+                            <img ng-src="{{text.img}}">
+                        </div>
+                        <h2>
+                            {{text.title}}
+                        </h2>
+                        <div class="info">
+                            <div class="left">
+                                <span class="time">{{text.date.$date | date:'yyyy-MM-dd HH:mm'}}</span>
+                                <span class="author">{{text.author}}</span>
+                            </div>
+                            <div class="right">
+                                <ul class="social">
+                                    <li class="facebook"></li>
+                                    <li class="google"></li>
+                                    <li class="twitter"></li>
+                                    <li class="vk"></li>
+                                    <li class="ya"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p>{{text.article}}</p>
+                        </div>
+                    </article>
                 </p>
             </div>
             <aside class="col-md-4">
