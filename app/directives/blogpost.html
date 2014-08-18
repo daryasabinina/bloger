@@ -1,0 +1,26 @@
+<article>
+    <div class="img">
+        <img ng-src="{{text.img}}">
+    </div>
+    <h2>
+        {{text.title}}
+    </h2>
+    <div class="info">
+        <div class="left">
+            <span class="time">{{text.date.$date | date:'yyyy-MM-dd HH:mm'}}</span>
+            <span class="author">{{text.author}}</span>
+        </div>
+        <div class="right">
+            <ul class="social">
+                <li class="facebook"></li>
+                <li class="google"></li>
+                <li class="twitter"></li>
+                <li class="vk"></li>
+                <li class="ya"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <p>{{text.article}}</p>
+    </div>
+</article>

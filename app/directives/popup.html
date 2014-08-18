@@ -1,0 +1,38 @@
+<div id="myModal" class="modal fade in" ng-show="wantWritePost" style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="wantWrite()">×<span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">New post</h4>
+            </div>
+            <div class="modal-body">
+                <form name="PostForm" role="form" ng-submit="addPost()" novalidate>
+                    <p ng-class="{'has-error': PostForm.author.$invalid, 'has-succes': !PostForm.author.$invalid,}">
+                        <label> Your name:
+                            <input type="text" name="author" class="form-control" ng-model="text.author" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label> Image:
+                            <input type="url" name="img" ng-model="text.img" class="form-control">
+                        </label>
+                    </p>
+                    <p ng-class="{'has-error': PostForm.title.$invalid, 'has-succes': !PostForm.title.$invalid,}">
+                        <label> Title:
+                            <input type="text" name="title" class="form-control" ng-model="text.title" required>
+                        </label>
+                    </p>
+                    <p ng-class="{'has-error': PostForm.text.$invalid, 'has-succes': !PostForm.text.$invalid}">
+                        <label> Text:
+                            <textarea class="form-control" name="article" ng-model="text.article" required></textarea>
+                        </label>
+                    </p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" ng-click="addPost()">Close</button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="PostForm.$invalid" ng-click="wantWrite()">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
