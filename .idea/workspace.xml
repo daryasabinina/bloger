@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5c2115f-70be-4993-bc5e-a7065a38cc9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/fromserv.js" />
-      <change type="DELETED" beforePath="C:\Users\Даша\Desktop\bloger\app\posts.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Даша\Desktop\bloger\app\scripts\controllers\about.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Даша\Desktop\bloger\app\views\about.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Даша\Desktop\bloger\app\views\main.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/directives/blogpost.html" afterPath="$PROJECT_DIR$/app/directives/blogpost.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/directives/popup.html" afterPath="$PROJECT_DIR$/app/directives/popup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bloger.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408963793109" ignored="false" />
-    <file path="/main.js" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408973725388" ignored="false" />
+    <file path="/Dummy.txt" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408983848575" ignored="false" />
+    <file path="/main.js" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408998292136" ignored="false" />
     <file path="/main.scss" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408044571838" ignored="false" />
-    <file path="/index.html" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408964300051" ignored="false" />
+    <file path="/index.html" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408996727397" ignored="false" />
     <file path="$PROJECT_DIR$/../AngularProject/app/index.html" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408338438132" ignored="false" />
-    <file path="/a.dummy" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408971928318" ignored="false" />
-    <file path="/blogpost.html" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408971217616" ignored="false" />
+    <file path="/a.dummy" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408998383698" ignored="false" />
+    <file path="/blogpost.html" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408987273543" ignored="false" />
     <file path="/popup.html" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408973104029" ignored="false" />
     <file path="$USER_HOME$/Documents/GitHub/epm.angular/app/scripts/controllers/main.js" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408963988201" ignored="false" />
     <file path="$USER_HOME$/Documents/GitHub/epm.angular/app/index.html" changelist="d5c2115f-70be-4993-bc5e-a7065a38cc9b" time="1408963988201" ignored="false" />
@@ -51,7 +46,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="29" selection-start="2559" selection-end="2559" vertical-scroll-proportion="-25.5">
+            <state line="19" column="61" selection-start="756" selection-end="756" vertical-scroll-proportion="-12.423077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="238" selection-start="440" selection-end="444" vertical-scroll-proportion="-3.6666667">
               <folding />
             </state>
           </provider>
@@ -60,16 +64,7 @@
       <file leaf-file-name="fromserv.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/fromserv.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popup.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/directives/popup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="5" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+            <state line="16" column="83" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,7 +82,16 @@
       <file leaf-file-name="blogpost.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/directives/blogpost.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="60" selection-start="837" selection-end="841" vertical-scroll-proportion="-5.730769">
+            <state line="15" column="24" selection-start="484" selection-end="484" vertical-scroll-proportion="-7.1153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postpage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/postpage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="45" selection-start="885" selection-end="885" vertical-scroll-proportion="-18.961538">
               <folding />
             </state>
           </provider>
@@ -96,7 +100,7 @@
       <file leaf-file-name="popup.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/directives/popup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="123" selection-start="2130" selection-end="2130" vertical-scroll-proportion="-2.6666667">
+            <state line="32" column="123" selection-start="2130" selection-end="2130" vertical-scroll-proportion="-5.8076925">
               <folding />
             </state>
           </provider>
@@ -114,7 +118,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="25" column="38" selection-start="534" selection-end="539" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,7 +127,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="48" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.86327076">
+            <state line="15" column="33" selection-start="409" selection-end="409" vertical-scroll-proportion="0.48295453">
               <folding />
             </state>
           </provider>
@@ -149,7 +153,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/styles/sass/_mixins.scss" />
         <option value="$PROJECT_DIR$/app/styles/sass/_variables.scss" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/app/posts.json" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/about.js" />
@@ -157,10 +160,11 @@
         <option value="$PROJECT_DIR$/app/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/app/scripts/directives/popup.js" />
         <option value="$PROJECT_DIR$/app/scripts/directives/blogpost.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/scripts/services/fromserv.js" />
-        <option value="$PROJECT_DIR$/app/directives/blogpost.html" />
         <option value="$PROJECT_DIR$/app/directives/popup.html" />
+        <option value="$PROJECT_DIR$/app/directives/blogpost.html" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/fromserv.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
       </list>
     </option>
@@ -205,6 +209,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,6 +239,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bloger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bloger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,12 +382,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/epm.angular" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../angularHome-service/app" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -415,12 +437,11 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3216" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0736" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15934475" sideWeight="0.6784" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15934475" sideWeight="0.9264" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -431,6 +452,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -505,13 +527,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/styles/sass/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/sass/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -520,10 +535,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/images/unmerge.psd">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="LargeFileEditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="LargeFileEditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
@@ -548,44 +563,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/directives/popup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="5" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/blogpost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/directives/blogpost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="60" selection-start="837" selection-end="841" vertical-scroll-proportion="-5.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="29" selection-start="2559" selection-end="2559" vertical-scroll-proportion="-25.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/fromserv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -599,14 +579,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/directives/popup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="123" selection-start="2130" selection-end="2130" vertical-scroll-proportion="-2.6666667">
+        <state line="32" column="123" selection-start="2130" selection-end="2130" vertical-scroll-proportion="-5.8076925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/directives/blogpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="24" selection-start="484" selection-end="484" vertical-scroll-proportion="-7.1153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="38" selection-start="534" selection-end="539" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/postpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="45" selection-start="885" selection-end="885" vertical-scroll-proportion="-18.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/blogpost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/fromserv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="83" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="238" selection-start="440" selection-end="444" vertical-scroll-proportion="-3.6666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="61" selection-start="756" selection-end="756" vertical-scroll-proportion="-12.423077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="48" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.86327076">
+        <state line="15" column="33" selection-start="409" selection-end="409" vertical-scroll-proportion="0.48295453">
           <folding />
         </state>
       </provider>

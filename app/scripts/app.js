@@ -16,4 +16,17 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ]);
+  ]).config(['$routeProvider',
+        function ($routeProvider) {
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'views/main.html',
+                    controller: 'NewPosting'
+                })
+                .when('/article/:artId', {
+                    templateUrl: 'views/postpage.html',
+                    controller: 'postController'
+                })
+                .otherwise('/');
+        }
+    ]);
