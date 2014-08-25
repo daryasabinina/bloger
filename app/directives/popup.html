@@ -3,7 +3,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" ng-click="wantWrite()">×<span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">New post</h4>
+                <h4 class="modal-title" id="myModalLabel"  ng-show="!editingArticle">New post</h4>
+                <h4 class="modal-title" id="myModalLabel"  ng-show="editingArticle">Edit post</h4>
             </div>
             <div class="modal-body">
                 <form name="PostForm" role="form" ng-submit="addPost()" novalidate>
@@ -24,11 +25,11 @@
                     </p>
                     <p ng-class="{'has-error': PostForm.text.$invalid, 'has-succes': !PostForm.text.$invalid}">
                         <label> Text:
-                            <textarea class="form-control" name="article" ng-model="text.article" required></textarea>
+                            <textarea class="form-control" name="body" ng-model="text.body" required></textarea>
                         </label>
                     </p>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" ng-click="addPost()">Close</button>
+                        <button type="button" class="btn btn-default" ng-click="wantWrite()">Close</button>
                         <button type="submit" class="btn btn-primary" ng-disabled="PostForm.$invalid" ng-click="wantWrite()">Save changes</button>
                     </div>
                 </form>

@@ -48,32 +48,6 @@
         <div class="container">
             <popup></popup>
             <div class="col-md-8">
-                <article ng-repeat="post in posts">
-                    <div class="img">
-                        <img ng-src="{{post.imageSource}}">
-                    </div>
-                    <h2>
-                        {{post.title}}
-                    </h2>
-                    <div class="info">
-                        <div class="left">
-                        <span class="time">{{post.date | date:'yyyy-MM-dd HH:mm'}}</span>
-                        <span class="author">{{post.author}}</span>
-                            </div>
-                        <div class="right">
-                            <ul class="social">
-                                <li class="facebook"></li>
-                                <li class="google"></li>
-                                <li class="twitter"></li>
-                                <li class="vk"></li>
-                                <li class="ya"></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="content">
-                    <p ng-bind-html="post.body"></p>
-                        </div>
-                </article>
                 <p>
                     <blogpost ng-repeat="text in texts"></blogpost>
                 </p>
@@ -117,6 +91,7 @@
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="scripts/services/fromserv.js"></script>
     <![endif]-->
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -150,6 +125,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/directives/popup.js"></script>
         <script src="scripts/directives/blogpost.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/services/fromserv.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

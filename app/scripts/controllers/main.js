@@ -8,12 +8,12 @@
  * Controller of the blogerApp
  */
 angular.module('blogerApp')
-  .controller('NewPosting', function ($http, $scope) {
-        $scope.posts = [];
-        $http.get('posts.json').success(function(data) {
-            $scope.posts = data;
-        });
-        $scope.post = {};
+  .controller('NewPosting', function ($http, $scope, Posts) {
+        //$scope.posts = [];
+        //$http.get('posts.json').success(function(data) {
+        //    $scope.posts = data;
+        //});
+        //$scope.post = {};
 
         $scope.wantWritePost = '';
         $scope.wantWrite = function () {
@@ -26,11 +26,41 @@ angular.module('blogerApp')
         $scope.texts = [];
         $scope.addPost = function () {
             $scope.text.date = {};
-            $scope.text.date.$date = Date.now();
+            $scope.text.date = Date.now();
             $scope.texts.push($scope.text);
             $scope.text='';
             $scope.wantWritePost = $scope.wantWritePost;
+            if (this.text._id) {
+                Posts.update({ id: this.text._id}, this.text);
+                $scope.resetForm();
+            } else {
+                    this.text.$save().then(function(response){
+                        $scope.texts.push(response);
+                        $scope.resetForm();
+                    });
+                }
+            this.text = new Posts();
+            };
+            $scope.deletePost = function(text) {
+                Posts.delete({id: text._id },
+                    function() {
+                    $scope.texts = Posts.query();
+                });
         };
+
+        $scope.editPost = function(text) {
+            $scope.text = text;
+            $scope.editingArticle = true;
+            $scope.wantWrite();
+        };
+
+        $scope.resetForm = function () {
+            $scope.editingArticle = false;
+            $scope.text = {};
+        };
+
+        this.text = new Posts();
+        $scope.texts = Posts.query();
     });
 
 
