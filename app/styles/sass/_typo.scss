@@ -1,0 +1,24 @@
+$arialNarrow: "Arial Narrow", Arial, sans-serif;
+
+nav {
+  ul {
+    li {
+      a {
+        font: $navTypo;
+        font-stretch: ultra-condensed;
+        color: $navTypoColor;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.container {
+  h2 {
+    font: $menuTypo;
+    font-size: 24px;
+  }
+  .info {
+    font-size: 12px;
+  }
+}

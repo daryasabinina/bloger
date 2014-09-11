@@ -10,13 +10,30 @@ $blue: #6b9ad0;
 $lightblue: #c6defa;
 $lightgrey: #69747c;
 
-$menuBackground: $blue;
+$navTypoColor: $white;
 
-$menuBorder: $lightblue;
+$navBackground: $blue;
 
-$menuTypo: 18px "Arial Narrow", Arial, sans-serif;
+$navBorder: $lightblue;
+
+$navTypo: 18px $arialNarrow;
 
 $infoBorder: 1px solid lightgrey;
 
 $iconSizeH: 17px;
 $iconSizeW: 11px;
+
+$navBorderWidth: 3px;
+$navBorder: $navBorderWidth solid $menuBorder;
+$navTabPadding: 3px;
+$navTabLink: 15px 32px;
+$navTriangleTop: 59px;
+$navTriangleBottom: 43%;
+
+$containerMargin: 50px;
+
+$infoPadding: 10px 0;
+$infoBottomMargin: 15px;
+$infoIconLeft: 4px;
+
+$authorPadding: auto 20px;

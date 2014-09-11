@@ -1,5 +1,7 @@
 @mixin triangle($dir, $size, $color) {
   border: $size transparent solid;
+  content: "";
+  position: absolute;
 
   @if ($dir == "top" or $dir == "up") {
     border-bottom-color: $color;

@@ -1,0 +1,16 @@
+nav {
+  @extend .resetBox;
+  background-color: $menuBackground;
+  border-bottom: $navBorder;
+  ul {
+    li {
+      a {
+        &:hover {
+          background-color: $whiteShadow;
+          color: $navTypoColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

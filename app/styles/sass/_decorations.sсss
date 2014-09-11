@@ -1,0 +1,42 @@
+nav {
+  ul {
+    li {
+      &.active:before {
+        @include triangle(down, 11px, $menuBorder);
+        top: $navTriangleTop + 3px;
+        left: $navTriangleLeft - 2%;
+      }
+      &.active:after {
+        @include triangle(down, 9px, $menuBackground);
+        top: $navTriangleTop;
+        left: $navTriangleLeft;
+      }
+    }
+  }
+}
+
+.container {
+  margin-top: $containerMargin;
+  color: $lightgrey;
+  .img {
+    img {
+      width: $fullpage;
+    }
+  }
+  label {
+    width: $fullpage;
+  }
+  .out {
+    z-index: 0;
+  }
+  .info {
+    .left {
+      .time:before {
+        background-image: url('../images/sprite/time.png');
+      }
+      .author:before {
+        background-image: url('../images/sprite/trace.png');
+      }
+    }
+  }
+}
