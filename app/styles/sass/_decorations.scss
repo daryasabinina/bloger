@@ -1,0 +1,64 @@
+nav {
+  ul {
+    li {
+      &.active:before {
+        @include triangle(down, 11px, $menuBorder);
+        top: $navTriangleTop + 3px;
+        left: $navTriangleLeft - 2%;
+      }
+      &.active:after {
+        @include triangle(down, 9px, $menuBackground);
+        top: $navTriangleTop;
+        left: $navTriangleLeft;
+      }
+    }
+  }
+}
+
+.container {
+  color: $lightgrey;
+  .info {
+    .left {
+      .time:before {
+        background-image: url('../images/sprite/time.png');
+      }
+      .author:before {
+        background-image: url('../images/sprite/trace.png');
+      }
+    }
+    .right {
+      .social {
+        li {
+          &.facebook {
+            background: url("../images/sprite/social.png") -4px -1px no-repeat ;
+
+          }
+          &.google {
+            background: url("../images/sprite/social.png") -58px -1px no-repeat ;
+            width: $socialWidth - 8px;
+          }
+          &.twitter {
+            background: url("../images/sprite/social.png") -105px -1px no-repeat ;
+
+          }
+          &.vk {
+            background: url("../images/sprite/social.png") -160px -1px no-repeat ;
+
+          }
+          &.ya {
+            background: url("../images/sprite/social.png") -215px -1px no-repeat ;
+
+          }
+        }
+      }
+    }
+  }
+  aside {
+    h3 {
+      &:before {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}

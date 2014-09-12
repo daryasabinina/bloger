@@ -1,24 +1,21 @@
+/*main*/
 $center: 0 auto;
-
 $fullpage: 100%;
 
-$logoPadding: 15px 0;
-
+/*colors*/
 $white: #fff;
 $whiteShadow: rgba(255, 255, 255, 0.1);
 $blue: #6b9ad0;
 $lightblue: #c6defa;
 $lightgrey: #69747c;
 
+$logoPadding: 15px 0;
+
 $navTypoColor: $white;
-
+$navTypo: 18px $arialNarrow;
 $navBackground: $blue;
-
 $navBorder: $lightblue;
 
-$navTypo: 18px $arialNarrow;
-
-$infoBorder: 1px solid lightgrey;
 
 $iconSizeH: 17px;
 $iconSizeW: 11px;
@@ -32,8 +29,19 @@ $navTriangleBottom: 43%;
 
 $containerMargin: 50px;
 
+$infoBorder: 1px solid lightgrey;
 $infoPadding: 10px 0;
 $infoBottomMargin: 15px;
 $infoIconLeft: 4px;
+$infoAuthorPadding: auto 20px;
 
-$authorPadding: auto 20px;
+$socialHeight: 25px;
+$socialWidth: 50px;
+
+$asideMarTop: 0px;
+$asidePadLeft: 35px;
+$asideBorder: 5px solid $blue;
+$asideIconHeight: 30px;
+$asideIconWidth: 30px;
+$asideIconLeft: 15px;
+$asibeIconPad: 5px;
