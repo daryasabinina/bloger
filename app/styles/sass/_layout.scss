@@ -46,7 +46,7 @@ nav {
       .time,
       .author {
         position: relative;
-        padding: $authorPadding;
+        padding: $infoAuthorPadding;
       }
       .time:before,
       .author:before {
@@ -72,6 +72,7 @@ nav {
 
   }
   aside {
+    float: right;
     h3 {
       padding-left: $asidePadLeft;
       margin-top: $asideMarTop;

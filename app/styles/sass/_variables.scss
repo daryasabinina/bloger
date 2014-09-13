@@ -1,6 +1,7 @@
 /*main*/
 $center: 0 auto;
 $fullpage: 100%;
+$arialNarrow: "Arial Narrow", Arial, sans-serif;
 
 /*colors*/
 $white: #fff;
@@ -21,11 +22,11 @@ $iconSizeH: 17px;
 $iconSizeW: 11px;
 
 $navBorderWidth: 3px;
-$navBorder: $navBorderWidth solid $menuBorder;
+$navBorder: $navBorderWidth solid $navBorder;
 $navTabPadding: 3px;
 $navTabLink: 15px 32px;
 $navTriangleTop: 59px;
-$navTriangleBottom: 43%;
+$navTriangleLeft: 43%;
 
 $containerMargin: 50px;
 
@@ -44,4 +45,4 @@ $asideBorder: 5px solid $blue;
 $asideIconHeight: 30px;
 $asideIconWidth: 30px;
 $asideIconLeft: 15px;
-$asibeIconPad: 5px;
+$asideIconPad: 5px;
