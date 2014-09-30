@@ -8,7 +8,7 @@
  * Controller of the blogerApp
  */
 angular.module('blogerApp')
-  .controller('NewPosting', function ($http, $scope, Posts) {
+  .controller('NewPosting', function ($scope, Posts) {
 
         $scope.wantWritePost = '';
         $scope.wantWrite = function () {
@@ -36,13 +36,16 @@ angular.module('blogerApp')
                 }
             this.text = new Posts();
             };
-            $scope.deletePost = function(text) {
-                Posts.delete({id: text._id },
-                    function() {
-                    $scope.texts = Posts.query();
+
+        $scope.deletePost = function (text) {
+            Posts.delete({id: text._id})
+                .$promise.then(function () {
+                    angular.forEach($scope.texts, function (index) {
+                            $scope.texts.splice(index, 1);
+                            return false;
+                    });
                 });
         };
-
         $scope.editPost = function(text) {
             $scope.text = text;
             $scope.editingArticle = true;
@@ -58,7 +61,7 @@ angular.module('blogerApp')
         $scope.texts = Posts.query();
     });
 
-angular.module('blogerApp').controller('postController', function($scope, $http, $routeParams, Posts){
+angular.module('blogerApp').controller('postController', function($scope, $routeParams, Posts){
         Posts.get({id: $routeParams.artId}).$promise.then(function(data){
             $scope.text = data;
         });
