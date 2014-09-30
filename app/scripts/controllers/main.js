@@ -8,7 +8,8 @@
  * Controller of the blogerApp
  */
 angular.module('blogerApp')
-  .controller('NewPosting', function ($scope, Posts) {
+  .controller('NewPosting', function ($scope, Posts, hundred) {
+
 
         $scope.wantWritePost = '';
         $scope.wantWrite = function () {
@@ -59,6 +60,12 @@ angular.module('blogerApp')
 
         this.text = new Posts();
         $scope.texts = Posts.query();
+
+        $scope.texts.$promise.then(function () {
+            angular.forEach($scope.texts, function (text) {
+                text.body = hundred.cut(text.body);
+            });
+        });
     });
 
 angular.module('blogerApp').controller('postController', function($scope, $routeParams, Posts){
