@@ -1,8 +1,12 @@
-.logo {
-  img {
-    display: block;
-    margin: $center;
-    padding: $logoPadding;
+header.col-md-12 {
+  float: none;
+  padding: 0;
+  .logo {
+    img {
+      display: block;
+      margin: $center;
+      padding: $logoPadding;
+    }
   }
 }
 
@@ -46,7 +50,7 @@ nav {
       .time,
       .author {
         position: relative;
-        padding: $infoAuthorPadding;
+        margin: $infoAuthorPadding;
       }
       .time:before,
       .author:before {

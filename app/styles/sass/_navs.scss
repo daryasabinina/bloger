@@ -3,6 +3,7 @@ nav {
   background-color: $navBackground;
   border-bottom: $navBorder;
   ul {
+    text-align: center;
     li {
       a {
         &:hover {
