@@ -61,4 +61,10 @@ nav {
       }
     }
   }
+  .tags {
+    .tag {
+      padding: $asideTagPadding;
+      background-color: $blue;
+    }
+  }
 }

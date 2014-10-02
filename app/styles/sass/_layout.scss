@@ -28,52 +28,56 @@ nav {
 
 .container {
   margin-top: $containerMargin;
-  .img {
-    img {
-    width: $fullpage;
-    }
-  }
   label {
     width: $fullpage;
   }
-  .out {
-    z-index: 0;
-  }
-  .info {
-    overflow: hidden;
-    border-top: $infoBorder;
-    border-bottom: $infoBorder;
-    padding: $infoPadding;
-    margin-bottom: $infoBottomMargin;
-    .left {
-      float: left;
-      .time,
-      .author {
-        position: relative;
-        margin: $infoAuthorPadding;
-      }
-      .time:before,
-      .author:before {
-        position: absolute;
-        left: $infoIconLeft;
-        width: $iconSizeW;
-        height: $iconSizeH;
-        content: "";
+  article {
+    h2 {
+      margin-top: 0;
+    }
+    .img {
+      img {
+      width: $fullpage;
       }
     }
-    .right {
-      float: right;
-      .social {
-        @extend .resetBox;
-        height: $socialHeight;
-        li {
-          display: inline-block;
-          width: $socialWidth;
+    .out {
+      z-index: 0;
+    }
+    .info {
+      overflow: hidden;
+      border-top: $infoBorder;
+      border-bottom: $infoBorder;
+      padding: $infoPadding;
+      margin-bottom: $infoBottomMargin;
+      .left {
+        float: left;
+        .time,
+        .author {
+          position: relative;
+          margin: $infoAuthorPadding;
+        }
+        .time:before,
+        .author:before {
+          position: absolute;
+          left: $infoIconLeft;
+          width: $iconSizeW;
+          height: $iconSizeH;
+          content: "";
+        }
+      }
+      .right {
+        float: right;
+        .social {
+          @extend .resetBox;
           height: $socialHeight;
+          li {
+            display: inline-block;
+            width: $socialWidth;
+            height: $socialHeight;
+          }
         }
       }
     }
-
   }
   aside {
     float: right;
