@@ -3,6 +3,9 @@ $center: 0 auto;
 $fullpage: 100%;
 $arialNarrow: "Arial Narrow", Arial, sans-serif;
 
+$small: 767px;
+$large: 991px;
+
 /*colors*/
 $white: #fff;
 $whiteShadow: rgba(255, 255, 255, 0.1);
@@ -11,6 +14,7 @@ $lightblue: #c6defa;
 $lightgrey: #69747c;
 
 $logoPadding: 15px 0;
+$logoWidth: 377px;
 
 $navTypoColor: $white;
 $navTypo: 18px $arialNarrow;
@@ -28,7 +32,7 @@ $navTabLink: 15px 32px;
 $navTriangleTop: 57px;
 $navTriangleLeft: 43%;
 
-$containerMargin: 50px;
+$containerMargin: 100px;
 
 $infoBorder: 1px solid lightgrey;
 $infoPadding: 10px 0;
@@ -47,3 +51,8 @@ $asideIconWidth: 30px;
 $asideIconLeft: 15px;
 $asideIconPad: 5px;
 $asideTagPadding: 0 10px;
+$asideTagBg: $blue;
+$asideTagCircleW: 5px;
+$asideTagCircleC: $white;
+$asideTagTriangle: 8px;
+

@@ -1,17 +1,20 @@
 nav {
   @extend .resetBox;
-  background-color: $navBackground;
-  border-bottom: $navBorder;
-  ul {
-    text-align: center;
-    li {
-      a {
-        &:hover {
-          background-color: $whiteShadow;
-          color: $navTypoColor;
-          text-decoration: none;
+  .collapse {
+    background-color: $navBackground;
+    border-bottom: $navBorder;
+    ul {
+      text-align: center;
+      li {
+        a {
+          &:hover {
+            background-color: $whiteShadow;
+            color: $navTypoColor;
+            text-decoration: none;
+          }
         }
       }
     }
   }
+
 }
