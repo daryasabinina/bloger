@@ -9,14 +9,15 @@ nav {
       }
     }
   }
-  aside {
-    h3 {
-      @include respond-to(medium-screens) {
-        font-size: 0;
-      }
-      &:before {
-        font-size: 24px;
-      }
+}
+
+aside {
+  h3 {
+    @include respond-to(medium-screens) {
+      font-size: 0;
+    }
+    &:before {
+      font-size: 24px;
     }
   }
 }

@@ -33,90 +33,91 @@ nav {
       }
     }
   }
-  .news {
-    float: right;
-    position: relative;
-    right: 3%;
-    margin-top: 50px;
+}
+
+.news {
+  float: right;
+  position: relative;
+  right: 3%;
+  margin-top: 50px;
+  @include respond-to(medium-screens) {
+    right: auto;
+  }
+  h3 {
+    padding-left: $asidePadLeft;
+    margin-top: $asideMarTop;
+    border-bottom: $asideBorder;
     @include respond-to(medium-screens) {
-      right: auto;
+      padding: 0;
+      z-index: 1001;
+      top: -109px;
+      position: absolute;
+      width: 40px;
+      height: 55px;
+      border: none;
     }
-      h3 {
-      padding-left: $asidePadLeft;
-      margin-top: $asideMarTop;
-      border-bottom: $asideBorder;
-      @include respond-to(medium-screens) {
-        padding: 0;
-        z-index: 1001;
-        top: -109px;
-        position: absolute;
-        width: 40px;
-        height: 55px;
-        border: none;
-      }
-        &:before {
-        position: absolute;
-        left: $asideIconLeft;
-        width: $asideIconWidth;
-        height: $asideIconHeight;
-        padding-top: $asideIconPad;
-        text-align: center;
-        @include respond-to(medium-screens) {
-          padding-top: $asideIconPad + 10px;
-          left: auto;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .qu {
-      @include respond-to(medium-screens) {
-        position: static;
-      }
-      h3 {
-        @include respond-to(medium-screens) {
-          left: 0;
-        }
-        &:before {
-          content: "?";
-        }
-        @include respond-to(medium-screens) {
-
-        }
-      }
-    }
-    .an {
-      @include respond-to(medium-screens) {
-        position: static;
-      }
-      h3 {
-        right: 0;
-        &:before {
-          content: "!";
-        }
-        @include respond-to(medium-screens) {
-
-        }
-      }
-    }
-    .tags {
+    &:before {
+      position: absolute;
+      left: $asideIconLeft;
+      width: $asideIconWidth;
+      height: $asideIconHeight;
+      padding-top: $asideIconPad;
       text-align: center;
-      .tag {
-        position: relative;
-        padding: $asideTagPadding;
-        margin-right: $asideTagTriangle;
-        &:before, &:after {
-          content: "";
-          position: absolute;
-        }
-        &:before {
-          right: 0px;
-          top: 5px;
-        }
-        &:after {
-          right: -$asideTagTriangle*2;
-          top: 0px;
-        }
+      @include respond-to(medium-screens) {
+        padding-top: $asideIconPad + 10px;
+        left: auto;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .qu {
+    @include respond-to(medium-screens) {
+      position: static;
+    }
+    h3 {
+      @include respond-to(medium-screens) {
+        left: 0;
+      }
+      &:before {
+        content: "?";
+      }
+      @include respond-to(medium-screens) {
+
+      }
+    }
+  }
+  .an {
+    @include respond-to(medium-screens) {
+      position: static;
+    }
+    h3 {
+      right: 0;
+      &:before {
+        content: "!";
+      }
+      @include respond-to(medium-screens) {
+
+      }
+    }
+  }
+  .tags {
+    text-align: center;
+    .tag {
+      position: relative;
+      padding: $asideTagPadding;
+      margin-right: $asideTagTriangle;
+      &:before, &:after {
+        content: "";
+        position: absolute;
+      }
+      &:before {
+        right: 0px;
+        top: 5px;
+      }
+      &:after {
+        right: -$asideTagTriangle*2;
+        top: 0px;
       }
     }
   }

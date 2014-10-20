@@ -13,34 +13,35 @@ nav {
       }
     }
   }
-  aside {
-    h3 {
-      &:before {
-        background-color: $blue;
-        color: $white;
-        @include respond-to(medium-screens) {
-          background-color: rgba(255, 255, 255, 0.1);
-          color: $blue;
-        }
+}
+
+aside {
+  h3 {
+    &:before {
+      background-color: $blue;
+      color: $white;
+      @include respond-to(medium-screens) {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $blue;
       }
     }
-    .tags {
-      .tag {
-        background-color: $asideTagBg;
-        color: $white;
-        &:hover {
-          text-decoration: none;
-          background-color: $lightblue;
-          &:after {
-            @include triangle(right, $asideTagTriangle, $lightblue);
-          }
-        }
-        &:before {
-          @include circle($asideTagCircleW, $asideTagCircleC);
-        }
+  }
+  .tags {
+    .tag {
+      background-color: $asideTagBg;
+      color: $white;
+      &:hover {
+        text-decoration: none;
+        background-color: $lightblue;
         &:after {
-          @include triangle(right, $asideTagTriangle, $asideTagBg);
+          @include triangle(right, $asideTagTriangle, $lightblue);
         }
+      }
+      &:before {
+        @include circle($asideTagCircleW, $asideTagCircleC);
+      }
+      &:after {
+        @include triangle(right, $asideTagTriangle, $asideTagBg);
       }
     }
   }
