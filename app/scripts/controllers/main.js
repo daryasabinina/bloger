@@ -30,15 +30,23 @@ angular.module('blogerApp')
         };
 
         //new post from popup with date
-        $scope.addPost = function(text) {
+        $scope.addPost = function() {
             $scope.text.date = {};
             $scope.text.date = Date.now();
             $scope.texts.push($scope.text);
+            //save to server
             if ($scope.text._id) {
-                Posts.update({_id: $scope.text._id}, $scope.text);
+                Posts.update({ id: $scope.text._id}, $scope.text);
+            } else {
+                Posts.save($scope.text);
             }
             $scope.resetForm();
         };
 
+        $scope.deletePost = function(text) {
+            Posts.delete({id: text.id});
+            var index = $scope.texts.indexOf(text);
+            $scope.texts.splice(index, 1);
+        };
     });
 
