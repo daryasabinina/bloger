@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('blogerApp')
+angular.module('moduleHundred', [])
   .service('hundred', function hundred() {
         this.cut = function (text) {
               if (text) {

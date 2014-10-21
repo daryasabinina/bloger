@@ -15,5 +15,19 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
-  ]);
+    'ngTouch',
+    'moduleHundred'
+  ]).config(['$routeProvider',
+        function ($routeProvider) {
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'views/main.html',
+                    controller: 'NewPosting'
+                })
+                .when('/article/:_id', {
+                    templateUrl: 'views/postpage.html',
+                    controller: 'postController'
+                })
+                .otherwise('/');
+        }
+    ]);

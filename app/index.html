@@ -87,13 +87,7 @@
         </aside>
         <div class="container" class="col-md-12 col-sm-12 col-xs-12">
             <popup></popup>
-            <div class="col-md-8 col-sm-12 col-sm-12">
-                <p>
-                    <blogpost ng-repeat="text in texts">
-
-                    </blogpost>
-                </p>
-            </div>
+            <div ng-view></div>
         </div>
         <footer>
 
@@ -130,7 +124,6 @@
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
-    <script src="scripts/services/fromserv.js"></script>
     <![endif]-->
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -160,12 +153,15 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <script src="scripts/module/hundred.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/directives/popup.js"></script>
         <script src="scripts/directives/blogpost.js"></script>
         <script src="scripts/services/fromserv.js"></script>
-    <script src="scripts/services/hundred.js"></script>
+
+
 
     <!-- endbuild -->
 </body>
