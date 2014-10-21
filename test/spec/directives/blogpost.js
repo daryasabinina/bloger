@@ -1,18 +1,28 @@
 'use strict';
 
-describe("Unit: Blogpost", function() {
-    var element;
-    var $scope;
-    beforeEach(module("blogerApp"))
-    beforeEach(inject(function($compile, $rootScope) {
-        $scope = $rootScope;
-        element = angular.element("<blogpost></blogpost>");
-        $compile(element)($rootScope)
+describe('Directive: blogpost', function () {
+
+    // load the directive's module
+    beforeEach(module('blogerApp'));
+
+    var element,
+        $scope,
+        texts = {
+            _id: '540d73dafef38b74188ecde4',
+            author: 'LOL',
+            body: 'OLOLO',
+            title: 'No title'
+        };
+
+    beforeEach(inject(function ($rootScope, $compile) {
+        $scope = $rootScope.$new();
+        $scope.texts = texts;
+        element = '<blogpost></blogpost>';
+        element = $compile(element)($scope);
     }));
 
-    describe("blogpost", function() {
-        it("should add a class of plain", function() {
-            expect(element.hasClass("plain")).toBe(true);
-        })
-    })
+    it('title should have right text', inject(function ($compile) {
+        expect(element.find('p').text()).toBe(texts.body);
+    }));
+
 });

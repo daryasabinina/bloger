@@ -12,8 +12,7 @@ angular.module('blogerApp')
         var Posts = $resource('http://54.72.3.96:3000/posts/:_id', {}, {
             update: {
                 method: 'PUT'
-            },
-            id: '@_id'
+            }
         });
         return Posts;
     });
