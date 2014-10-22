@@ -17,6 +17,6 @@
                     replace: false,
                     scope: false,
                     link: ClassFn,
-                    templateUrl: '/directives/blogpost.html'
+                    templateUrl: 'directives/blogpost.html'
                 };
             });

@@ -13,6 +13,6 @@ angular.module('blogerApp')
             restrict: 'EA',
             replace: true,
             scope: false,
-            templateUrl: '/directives/popup.html'
+            templateUrl: 'directives/popup.html'
         };
     });

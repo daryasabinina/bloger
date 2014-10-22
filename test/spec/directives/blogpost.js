@@ -19,6 +19,7 @@ describe('Directive: blogpost', function () {
         $scope.texts = texts;
         element = '<blogpost></blogpost>';
         element = $compile(element)($scope);
+        $scope.$digest();
     }));
 
     it('title should have right text', inject(function ($compile) {
