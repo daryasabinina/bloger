@@ -38,8 +38,6 @@ nav {
 .news {
   float: right;
   position: relative;
-  right: 3%;
-  margin-top: 50px;
   @include respond-to(medium-screens) {
     right: auto;
   }
