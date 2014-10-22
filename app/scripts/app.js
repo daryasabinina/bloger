@@ -22,12 +22,14 @@ angular
             $routeProvider
                 .when('/', {
                     templateUrl: 'views/main.html',
-                    controller: 'NewPosting'
+                    controller: 'postController'
                 })
                 .when('/article/:_id', {
                     templateUrl: 'views/postpage.html',
                     controller: 'postController'
                 })
-                .otherwise('/');
+                .otherwise({
+                    redirectTo: '/'
+                });
         }
     ]);

@@ -66,7 +66,8 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+        'karma-ng-html2js-preprocessor'
     ],
 
     // Continuous Integration mode

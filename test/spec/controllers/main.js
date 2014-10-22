@@ -2,7 +2,6 @@
 
 describe('Controller: NewPosting', function () {
     var $scope,
-        text,
         NewPosting;
 
     beforeEach(module('blogerApp'));

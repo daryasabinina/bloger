@@ -25,7 +25,7 @@
                     </p>
                     <p ng-class="{'has-error': PostForm.text.$invalid, 'has-succes': !PostForm.text.$invalid}">
                         <label> Text:
-                            <textarea class="form-control" name="body" ng-model="text.body" required></textarea>
+                            <textarea class="form-control" name="body" required>{{text.body}}</textarea>
                         </label>
                     </p>
                     <div class="modal-footer">
