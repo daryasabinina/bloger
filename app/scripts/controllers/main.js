@@ -50,6 +50,7 @@ angular.module('blogerApp')
         };
 
         $scope.editPost = function(text) {
+            $scope.wantWritePost = '';
             if ( $scope.wantWritePost === $scope.wantWritePost ) {
                 $scope.wantWritePost = !$scope.wantWritePost;
             }

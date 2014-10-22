@@ -17,8 +17,8 @@ describe('Directive: blogpost', function () {
     beforeEach(inject(function ($rootScope, $compile) {
         $scope = $rootScope.$new();
         $scope.texts = texts;
-        element = '<blogpost></blogpost>';
-        element = $compile(element)($scope);
+        element = angular.element('<blogpost></blogpost>');
+        $compile(element)($scope);
         $scope.$digest();
     }));
 
