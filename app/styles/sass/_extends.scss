@@ -2,3 +2,19 @@
   margin: 0;
   padding: 0;
 }
+
+%aside-buttons {
+    padding-left: $asidePadLeft;
+    margin-top: $asideMarTop;
+    border-bottom: $asideBorder;
+    &:before {
+      background-color: $blue;
+      color: $white;
+      position: absolute;
+      left: $asideIconLeft;
+      width: $asideIconWidth;
+      height: $asideIconHeight;
+      padding-top: $asideIconPad;
+      text-align: center;
+    }
+}

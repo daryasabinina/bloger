@@ -1,8 +1,7 @@
-nav {
+.navbar {
+  border-bottom: $navBorder;
+  background-color: $navBackground;
   @extend .resetBox;
-  .collapse {
-    background-color: $navBackground;
-    border-bottom: $navBorder;
     ul {
       text-align: center;
       li {
@@ -17,4 +16,32 @@ nav {
     }
   }
 
+.show-qu,
+.show-an,
+.show-tags {
+  display: none;
+  height: 55px;
+  width: 40px;
+  margin: 1px;
+  background-color: rgba(255,255,255, 0.1);
+  float: left;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+}
+
+.show-qu,
+.show-an {
+  @include respond-to(medium-screens) {
+    display: block;
+  }
+}
+
+.show-an {
+  @include respond-to(medium-screens) {
+    float: right;
+    content: "!";
+  }
 }

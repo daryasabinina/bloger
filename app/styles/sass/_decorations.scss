@@ -15,87 +15,68 @@ nav {
   }
 }
 
-aside {
-  h3 {
-    &:before {
-      background-color: $blue;
-      color: $white;
-      @include respond-to(medium-screens) {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: $blue;
+.tags {
+  .tag {
+    background-color: $asideTagBg;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      background-color: $lightblue;
+      &:after {
+        @include triangle(right, $asideTagTriangle, $lightblue);
       }
     }
-  }
-  .tags {
-    .tag {
-      background-color: $asideTagBg;
-      color: $white;
-      &:hover {
-        text-decoration: none;
-        background-color: $lightblue;
-        &:after {
-          @include triangle(right, $asideTagTriangle, $lightblue);
-        }
-      }
-      &:before {
-        @include circle($asideTagCircleW, $asideTagCircleC);
-      }
-      &:after {
-        @include triangle(right, $asideTagTriangle, $asideTagBg);
-      }
+    &:before {
+      @include circle($asideTagCircleW, $asideTagCircleC);
+    }
+    &:after {
+      @include triangle(right, $asideTagTriangle, $asideTagBg);
     }
   }
 }
 
-.container {
-  color: $lightgrey;
-  .info {
-    .left {
-      .time:before {
-        background-image: url('../images/sprite/time.png');
+.time:before {
+  background-image: url('../images/sprite/time.png');
+}
+
+.author:before {
+  background-image: url('../images/sprite/trace.png');
+}
+
+.social {
+  li {
+    &.facebook {
+      background: -4px -1px no-repeat;
+    }
+    &.google {
+      background: -58px -1px no-repeat;
+      width: $socialWidth - 8px;
+    }
+    &.twitter {
+      background: -105px -1px no-repeat;
+    }
+    &.vk {
+      background: -160px -1px no-repeat;
+    }
+    &.ya {
+      background: -215px -1px no-repeat;
+      width: $socialWidth - 8px;
+    }
+    &.facebook,
+    &.google,
+    &.twitter,
+    &.vk,
+    &.ya {
+      @include breakpoint($brkpt_small) {
+        background-image: url("../images/sprite/social-active.png") ;
       }
-      .author:before {
-        background-image: url('../images/sprite/trace.png');
+      @include breakpoint($brkpt_large) {
+        background-image: url("../images/sprite/social.png") ;
       }
     }
-    .right {
-      .social {
-        li {
-          &.facebook {
-            background: url("../images/sprite/social.png") -4px -1px no-repeat;
-          }
-          &.google {
-            background: url("../images/sprite/social.png") -58px -1px no-repeat;
-            width: $socialWidth - 8px;
-          }
-          &.twitter {
-            background: url("../images/sprite/social.png") -105px -1px no-repeat;
-          }
-          &.vk {
-            background: url("../images/sprite/social.png") -160px -1px no-repeat;
-          }
-          &.ya {
-            background: url("../images/sprite/social.png") -215px -1px no-repeat;
-            width: $socialWidth - 8px;
-          }
-          &.facebook,
-          &.google,
-          &.twitter,
-          &.vk,
-          &.ya {
-            @include respond-to(medium-screens) {
-              background-image: url("../images/sprite/social-active.png");
-            }
-            @include respond-to(handhelds) {
-              background-image: url("../images/sprite/social-active.png");
-            }
-          }
-          &:hover {
-            background-image: url("../images/sprite/social-active.png");
-            cursor: pointer;
-          }
-        }
-      }
+    &:hover {
+      background-image: url("../images/sprite/social-active.png");
+      cursor: pointer;
     }
   }
 }
