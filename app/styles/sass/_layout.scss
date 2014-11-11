@@ -9,7 +9,16 @@ header.col-md-12 {
       display: block;
       margin: $center;
       padding: $logoPadding;
+      @include respond-to(handhelds) {
+        padding: 10px;
+      }
     }
+  }
+}
+
+.buttons {
+  @include respond-to(handhelds) {
+    text-align: center;
   }
 }
 
@@ -23,6 +32,9 @@ nav {
   ul.nav {
     @extend .resetBox;
     margin: $center;
+    @include respond-to(handhelds) {
+      margin-top: 40px;
+    }
     li {
       position: relative;
       display: inline-block;
@@ -40,36 +52,78 @@ nav {
   position: relative;
   @include respond-to(medium-screens) {
     right: auto;
+    font-size: 0.9em;
+    padding: 0;
+    .tags {
+      font-size: 1.1em;
+    }
+  }
+  @include respond-to(handhelds) {
+    padding: 0;
   }
   h3 {
     @extend %aside-buttons;
     }
+  p,
+  .tags {
+    @include respond-to(medium-screens) {
+
+      padding: 30px 40px;
+    }
+    @include respond-to(handhelds) {
+      margin: 0;
+    }
+  }
   }
 
+.qu, .an, .tags {
+  @include respond-to(handhelds) {
+    background-color: rgba($lightblue, 0.6);
+    color: $blue;
+    font-size: 1em;
+    padding: 15px;
+  }
+}
 
 .qu {
   @include respond-to(medium-screens) {
-    display: none;
+    position: relative;
   }
+
   h3 {
-    @include respond-to(medium-screens) {
-      left: 0;
-    }
+      @extend %tablet-h;
     &:before {
       content: "?";
+      @include respond-to(medium-screens) {
+        display: none;
+      }
+    }
+    @include respond-to(handhelds) {
+      display: none;
     }
   }
+
 }
 .an {
   @include respond-to(medium-screens) {
-    display: none;
+    position: relative;
   }
   h3 {
-    right: 0;
+      @extend %tablet-h;
+    left: auto;
+    right: -49px;
     &:before {
       content: "!";
+      @include respond-to(medium-screens) {
+        display: none;
+      }
+
+      }
+    @include respond-to(handhelds) {
+      display: none;
     }
   }
+
 }
 .tags {
   text-align: center;
@@ -94,6 +148,14 @@ nav {
 
 .container {
   margin-top: $containerMargin;
+  @include respond-to(medium-screens) {
+    width: $fullpage;
+    margin-top: 60px;
+  }
+  @include respond-to(handhelds) {
+    margin-top: 39px;
+    padding: 0;
+  }
   label {
     width: $fullpage;
   }
@@ -102,6 +164,7 @@ nav {
       position: relative;
       margin-bottom: 50px;
       width: 95%;
+      padding: 0 20px;
     }
     @include respond-to(handhelds) {
       position: relative;
@@ -160,7 +223,7 @@ nav {
   height: $socialHeight;
   @include respond-to(medium-screens) {
     position: absolute;
-    right: -55px;
+    right: -70px;
     top: 0;
   }
   @include respond-to(handhelds) {

@@ -22,6 +22,12 @@ aside {
   h2 {
     font: $navTypo;
     font-size: 24px;
+    @include respond-to(handhelds) {
+      text-align: center;
+      a {
+        color: $gray;
+      }
+    }
   }
   .info {
     font-size: 12px;

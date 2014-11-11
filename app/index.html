@@ -29,6 +29,7 @@
                 <div class="show-qu"></div>
                 <div class="show-an"></div>
                 <div class="show-tags"></div>
+                <div class="show-nav"></div>
                 <ul class="nav">
                     <li>
                         <a href="#">JavaScript</a>
@@ -102,19 +103,34 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-    <script>
+    <script media="(min-width: 500px)">
         var h_hght = 93; // высота шапки
         var h_mrg = 0;     // отступ когда шапка уже не видна
+        var mq = window.matchMedia( "(min-width: 700px)" );
         $(function(){
-            $(window).scroll(function(){
-                var top = $(this).scrollTop();
-                var elem = $('#main_menu');
-                if (top+h_mrg < h_hght) {
-                    elem.css('top', (h_hght-top));
-                } else {
-                    elem.css('top', h_mrg);
-                }
-            });
+            if (mq.matches) {
+                $(window).scroll(function () {
+                    var top = $(this).scrollTop();
+                    var elem = $('#main_menu');
+                    if (top + h_mrg < h_hght) {
+                        elem.css('top', (h_hght - top));
+                    } else {
+                        elem.css('top', h_mrg);
+                    }
+                });
+            } else {
+                $(window).scroll(function () {
+                    var top = $(this).scrollTop();
+                    var elem = $('#main_menu');
+                    if (top + h_mrg < h_hght/2) {
+                        elem.css('top', (h_hght/2 - top));
+                        elem.removeClass('show-logo');
+                    } else {
+                        elem.css('top', h_mrg);
+                        elem.addClass('show-logo');
+                    }
+                });
+            }
         });
     </script>
     <!--[if lt IE 9]>
