@@ -1,18 +1,13 @@
-nav {
-  ul {
-    li {
-      &.active:before {
-        @include triangle(down, 11px, $navBorderBackground);
-        top: $navTriangleTop + 3px;
-        left: $navTriangleLeft - 2%;
-      }
-      &.active:after {
-        @include triangle(down, 9px, $navBackground);
-        top: $navTriangleTop;
-        left: $navTriangleLeft;
-      }
-    }
-  }
+.active:before {
+  @include triangle(down, 11px, $navBorderBackground);
+  top: $navTriangleTop + 3px;
+  left: $navTriangleLeft - 2%;
+}
+
+.active:after {
+  @include triangle(down, 9px, $navBackground);
+  top: $navTriangleTop;
+  left: $navTriangleLeft;
 }
 
 .tags {

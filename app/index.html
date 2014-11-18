@@ -26,10 +26,10 @@
                 <a href="/"><img src="images/logo.png"></a>
             </div>
             <nav id="main_menu" class="navbar navbar-fixed-top" role="navigation">
-                <div class="show-qu"></div>
-                <div class="show-an"></div>
-                <div class="show-tags"></div>
-                <div class="show-nav"></div>
+                <div class="show-qu" onclick="showMe(question)"></div>
+                <div class="show-an" onclick="showMe(answer)"></div>
+                <div class="show-tags" onclick="showMe(tags)"></div>
+                <div class="show-nav" onclick="showMe(nav)"></div>
                 <ul class="nav">
                     <li>
                         <a href="#">JavaScript</a>
@@ -103,35 +103,54 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-    <script media="(min-width: 500px)">
-        var h_hght = 93; // высота шапки
+    <script>
         var h_mrg = 0;     // отступ когда шапка уже не видна
-        var mq = window.matchMedia( "(min-width: 700px)" );
-        $(function(){
-            if (mq.matches) {
-                $(window).scroll(function () {
-                    var top = $(this).scrollTop();
-                    var elem = $('#main_menu');
-                    if (top + h_mrg < h_hght) {
-                        elem.css('top', (h_hght - top));
-                    } else {
-                        elem.css('top', h_mrg);
-                    }
-                });
+        var h_hght = document.getElementsByClassName('logo')[0].offsetHeight;
+        var elem = $('#main_menu');
+        window.onresize = function() {
+            h_hght = document.getElementsByClassName('logo')[0].offsetHeight; // высота шапки
+            if (elem.offset().top > 0) {
+                if (h_hght < 93) {
+                    elem.addClass('show-logo');
+                } else {
+                    elem.removeClass('show-logo');
+                }
             } else {
-                $(window).scroll(function () {
-                    var top = $(this).scrollTop();
-                    var elem = $('#main_menu');
-                    if (top + h_mrg < h_hght/2) {
-                        elem.css('top', (h_hght/2 - top));
-                        elem.removeClass('show-logo');
-                    } else {
-                        elem.css('top', h_mrg);
-                        elem.addClass('show-logo');
-                    }
-                });
+                elem.css('top', h_hght);
             }
+        };
+        $(function() {
+            $(window).scroll(function () {
+                var top = $(this).scrollTop();
+                if (top + h_mrg < h_hght) {
+                    elem.css('top', (h_hght - top));
+                    elem.removeClass('show-logo');
+                } else {
+                    elem.css('top', h_mrg);
+                    if (h_hght < 93) {
+                        elem.addClass('show-logo');
+                    } else {
+                        elem.removeClass('show-logo');
+                    }
+                }
+            });
         });
+    </script>
+    <script>
+        var answer = $('.an').first();
+        var question = $('.qu').first();
+        var tags = $('.tags').first();
+        var nav = $('.nav').first();
+        this.addClass('active');
+        var showMe = function(me) {
+            if(me.css('display') == 'none') {
+                me.first().css('display', 'block');
+                me.addClass('active');
+            } else {
+                me.first().css('display', 'none');
+                me.removeClass('active');
+            }
+        };
     </script>
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
