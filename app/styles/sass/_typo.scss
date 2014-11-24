@@ -12,11 +12,10 @@ nav {
 }
 
 aside {
-    &:before {
-      font-size: 24px;
-    }
+  &:before {
+    font-size: 24px;
   }
-
+}
 
 .container {
   h2 {
@@ -33,4 +32,65 @@ aside {
     font-size: 12px;
   }
   color: $lightgrey;
+}
+
+%tablet-h {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: $blue;
+  text-transform: uppercase;
+  @include respond-to(medium-screens) {
+    text-align: center;
+  }
+}
+
+.news {
+  @include respond-to(medium-screens) {
+    font-size: 0.9em;
+    .tags {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.qu,
+.an,
+.tags {
+  @include respond-to(handhelds) {
+    color: $blue;
+    font-size: 1em;
+  }
+}
+
+.buttons {
+  @include respond-to(handhelds) {
+    text-align: center;
+  }
+}
+
+.tags {
+  text-align: center;
+  .tag {
+    color: $white;
+  }
+}
+
+.social {
+  @include respond-to(medium-screens) {
+    text-align: right;
+  }
+  @include respond-to(handhelds) {
+    text-align: center;
+  }
+}
+
+.show-qu,
+.show-an,
+.show-tags {
+  color: $blue;
+  font-size: 2em;
+  text-align: center;
+  @include respond-to(handhelds) {
+    font-size: 1.5em;
+  }
 }

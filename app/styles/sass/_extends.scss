@@ -4,37 +4,41 @@
 }
 
 %aside-buttons {
-    padding-left: $asidePadLeft;
-    margin-top: $asideMarTop;
-    border-bottom: $asideBorder;
-    &:before {
-      background-color: $blue;
-      color: $white;
-      position: absolute;
-      left: $asideIconLeft;
-      width: $asideIconWidth;
-      height: $asideIconHeight;
-      padding-top: $asideIconPad;
-      text-align: center;
-    }
+  margin-top: $asideMarTop;
+  padding-left: $asidePadLeft;
+  padding-bottom: 5px;
+  border-bottom: $asideBorder;
+  &:before {
+    position: absolute;
+    left: $asideIconLeft;
+    width: $asideIconWidth;
+    height: $asideIconHeight;
+    padding-top: $asideIconPad;
+    color: $white;
+    text-align: center;
+    background-color: $blue;
+  }
 }
 
 %tablet-h {
   @include respond-to(medium-screens) {
     position: absolute;
-    border: 0;
-    left: -59px;
-    width: 130px;
-    top: 45px;
-    height: 41px;
-    padding: 10px 15px 5px 5px;
+    top: $tabletButton-top;
+    left: $tabletButton-left;
+    width: $tabletButton-w;
+    height: $tabletButton-h;
     margin: 0;
+    padding: $tabletButton-p;
+    border: 0;
+    background-color: rgba($lightblue, 0.5);
     transform: rotate(270deg);
-    background-color: $lightblue;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: $blue;
-    text-align: center;
+  }
+  @include respond-to(handhelds) {
+    display: none;
+  }
+  &:before {
+    @include respond-to(medium-screens) {
+      display: none;
+    }
   }
 }

@@ -10,10 +10,17 @@
   left: $navTriangleLeft;
 }
 
+.qu,
+.an,
+.tags {
+  @include respond-to(handhelds) {
+    background-color: rgba($lightblue, 0.6);
+  }
+}
+
 .tags {
   .tag {
     background-color: $asideTagBg;
-    color: $white;
     &:hover {
       text-decoration: none;
       background-color: $lightblue;
@@ -41,36 +48,68 @@
 .social {
   li {
     &.facebook {
-      background: url("../images/sprite/social.png") -4px -1px no-repeat;
+      @include get-sprite($img, facebook);
+      &:hover {
+        @include get-sprite($img, facebook-active);
+      }
+      @include respond-to(medium-screens) {
+        @include get-sprite($img, facebook-active);
+      }
+      @include respond-to(handhelds) {
+        @include get-sprite($img, facebook-active);
+      }
     }
     &.google {
-      background: url("../images/sprite/social.png") -58px -1px no-repeat;
+      @include get-sprite($img, google);
+      &:hover {
+        @include get-sprite($img, googlel-active);
+      }
+      @include respond-to(medium-screens) {
+        @include get-sprite($img, googlel-active);
+      }
+      @include respond-to(handhelds) {
+        @include get-sprite($img, googlel-active);
+      }
       width: $socialWidth - 8px;
     }
     &.twitter {
-      background: url("../images/sprite/social.png") -105px -1px no-repeat;
-    }
-    &.vk {
-      background: url("../images/sprite/social.png") -160px -1px no-repeat;
-    }
-    &.ya {
-      background: url("../images/sprite/social.png") -215px -1px no-repeat;
-      width: $socialWidth - 8px;
-    }
-    &.facebook,
-    &.google,
-    &.twitter,
-    &.vk,
-    &.ya {
+      @include get-sprite($img, twitter);
+      &:hover {
+        @include get-sprite($img, twitter-active);
+      }
       @include respond-to(medium-screens) {
-        background-image: url("../images/sprite/social-active.png");
+        @include get-sprite($img, twitter-active);
       }
       @include respond-to(handhelds) {
-        background-image: url("../images/sprite/social-active.png");
+        @include get-sprite($img, twitter-active);
       }
     }
+    &.vk {
+      @include get-sprite($img, vk);
+      &:hover {
+        @include get-sprite($img, vk-active);
+      }
+      @include respond-to(medium-screens) {
+        @include get-sprite($img, vk-active);
+      }
+      @include respond-to(handhelds) {
+        @include get-sprite($img, vk-active);
+      }
+    }
+    &.ya {
+      @include get-sprite($img, ya);
+      &:hover {
+        @include get-sprite($img, ya-active);
+      }
+      @include respond-to(medium-screens) {
+        @include get-sprite($img, ya-active);
+      }
+      @include respond-to(handhelds) {
+        @include get-sprite($img, ya-active);
+      }
+      width: $socialWidth - 8px;
+    }
     &:hover {
-      background-image: url("../images/sprite/social-active.png");
       cursor: pointer;
     }
   }

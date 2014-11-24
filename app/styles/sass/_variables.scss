@@ -25,12 +25,18 @@ $navBorderBackground: $lightblue;
 $iconSizeH: 17px;
 $iconSizeW: 11px;
 
+$navHeight: 40px;
 $navBorderWidth: 3px;
 $navBorder: $navBorderWidth solid $navBorderBackground;
 $navTabPadding: 3px;
 $navTabLink: 15px 32px;
-$navTriangleTop: 57px;
+$navTriangleTop: 56px;
 $navTriangleLeft: 43%;
+$navShowWidth: 20px;
+
+$showAsideH: 55px;
+$showAsideW: 40px;
+$showAsideM: 1px;
 
 $containerMargin: 100px;
 
@@ -56,6 +62,15 @@ $asideTagCircleW: 5px;
 $asideTagCircleC: $white;
 $asideTagTriangle: 8px;
 
+$tabletButton-w: 130px;
+$tabletButton-h: 44px;
+$tabletButton-p: 10px 15px 5px 5px;
+$tabletButton-left: -59px;
+$tabletButton-top: 45px;
+
+
 $brkpt_small: 0;
 $brkpt_medium: 320px;
 $brkpt_large: 750px;
+
+$img: sprite-map('../images/sprite/*.png')

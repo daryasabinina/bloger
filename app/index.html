@@ -26,9 +26,9 @@
                 <a href="/"><img src="images/logo.png"></a>
             </div>
             <nav id="main_menu" class="navbar navbar-fixed-top" role="navigation">
-                <div class="show-qu" onclick="showMe(question)"></div>
-                <div class="show-an" onclick="showMe(answer)"></div>
-                <div class="show-tags" onclick="showMe(tags)"></div>
+                <div class="show-qu" onclick="showMe(question); active(this)">?</div>
+                <div class="show-an" onclick="showMe(answer); active(this)">!</div>
+                <div class="show-tags" onclick="showMe(tags); active(this)">T</div>
                 <div class="show-nav" onclick="showMe(nav)"></div>
                 <ul class="nav">
                     <li>
@@ -103,55 +103,6 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-    <script>
-        var h_mrg = 0;     // отступ когда шапка уже не видна
-        var h_hght = document.getElementsByClassName('logo')[0].offsetHeight;
-        var elem = $('#main_menu');
-        window.onresize = function() {
-            h_hght = document.getElementsByClassName('logo')[0].offsetHeight; // высота шапки
-            if (elem.offset().top > 0) {
-                if (h_hght < 93) {
-                    elem.addClass('show-logo');
-                } else {
-                    elem.removeClass('show-logo');
-                }
-            } else {
-                elem.css('top', h_hght);
-            }
-        };
-        $(function() {
-            $(window).scroll(function () {
-                var top = $(this).scrollTop();
-                if (top + h_mrg < h_hght) {
-                    elem.css('top', (h_hght - top));
-                    elem.removeClass('show-logo');
-                } else {
-                    elem.css('top', h_mrg);
-                    if (h_hght < 93) {
-                        elem.addClass('show-logo');
-                    } else {
-                        elem.removeClass('show-logo');
-                    }
-                }
-            });
-        });
-    </script>
-    <script>
-        var answer = $('.an').first();
-        var question = $('.qu').first();
-        var tags = $('.tags').first();
-        var nav = $('.nav').first();
-        this.addClass('active');
-        var showMe = function(me) {
-            if(me.css('display') == 'none') {
-                me.first().css('display', 'block');
-                me.addClass('active');
-            } else {
-                me.first().css('display', 'none');
-                me.removeClass('active');
-            }
-        };
-    </script>
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
@@ -184,6 +135,7 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/navigation.js"></script>
     <script src="scripts/app.js"></script>
 
     <script src="scripts/module/hundred.js"></script>
