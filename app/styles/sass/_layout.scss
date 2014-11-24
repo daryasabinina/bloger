@@ -5,10 +5,11 @@ header.col-md-12 {
     img {
       display: block;
       margin: $center;
-      padding: $logoPadding;
-      @include respond-to(handhelds) {
-        width: $logoWidth/2;
-        padding: 10px;
+      width: $logoWidth/2;
+      padding: 10px;
+      @include breakpoint($breakpoint_medium) {
+        padding: $logoPadding;
+        width: $logoWidth;
       }
     }
   }

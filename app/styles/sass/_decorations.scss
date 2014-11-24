@@ -13,8 +13,9 @@
 .qu,
 .an,
 .tags {
-  @include respond-to(handhelds) {
     background-color: rgba($lightblue, 0.6);
+    @include breakpoint($breakpoint_medium) {
+    background: none;
   }
 }
 
@@ -48,63 +49,48 @@
 .social {
   li {
     &.facebook {
-      @include get-sprite($img, facebook);
+      @include get-sprite($img, facebook-active);
+      @include breakpoint($breakpoint_large) {
+        @include get-sprite($img, facebook);
+      }
       &:hover {
-        @include get-sprite($img, facebook-active);
-      }
-      @include respond-to(medium-screens) {
-        @include get-sprite($img, facebook-active);
-      }
-      @include respond-to(handhelds) {
         @include get-sprite($img, facebook-active);
       }
     }
     &.google {
-      @include get-sprite($img, google);
+      @include get-sprite($img, googlel-active);
+      @include breakpoint($breakpoint_large) {
+        @include get-sprite($img, google);
+      }
       &:hover {
-        @include get-sprite($img, googlel-active);
-      }
-      @include respond-to(medium-screens) {
-        @include get-sprite($img, googlel-active);
-      }
-      @include respond-to(handhelds) {
         @include get-sprite($img, googlel-active);
       }
       width: $socialWidth - 8px;
     }
     &.twitter {
-      @include get-sprite($img, twitter);
+      @include get-sprite($img, twitter-active);
+      @include breakpoint($breakpoint_large) {
+        @include get-sprite($img, twitter);
+      }
       &:hover {
-        @include get-sprite($img, twitter-active);
-      }
-      @include respond-to(medium-screens) {
-        @include get-sprite($img, twitter-active);
-      }
-      @include respond-to(handhelds) {
         @include get-sprite($img, twitter-active);
       }
     }
     &.vk {
-      @include get-sprite($img, vk);
+      @include get-sprite($img, vk-active);
+      @include breakpoint($breakpoint_large) {
+        @include get-sprite($img, vk);
+      }
       &:hover {
-        @include get-sprite($img, vk-active);
-      }
-      @include respond-to(medium-screens) {
-        @include get-sprite($img, vk-active);
-      }
-      @include respond-to(handhelds) {
         @include get-sprite($img, vk-active);
       }
     }
     &.ya {
-      @include get-sprite($img, ya);
+      @include get-sprite($img, ya-active);
+      @include breakpoint($breakpoint_large) {
+        @include get-sprite($img, ya);
+      }
       &:hover {
-        @include get-sprite($img, ya-active);
-      }
-      @include respond-to(medium-screens) {
-        @include get-sprite($img, ya-active);
-      }
-      @include respond-to(handhelds) {
         @include get-sprite($img, ya-active);
       }
       width: $socialWidth - 8px;

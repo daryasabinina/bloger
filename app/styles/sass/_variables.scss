@@ -21,7 +21,6 @@ $navTypo: 18px $arialNarrow;
 $navBackground: $blue;
 $navBorderBackground: $lightblue;
 
-
 $iconSizeH: 17px;
 $iconSizeW: 11px;
 
@@ -68,9 +67,7 @@ $tabletButton-p: 10px 15px 5px 5px;
 $tabletButton-left: -59px;
 $tabletButton-top: 45px;
 
-
-$brkpt_small: 0;
-$brkpt_medium: 320px;
-$brkpt_large: 750px;
+$breakpoint_medium: 750px;
+$breakpoint_large: 975px;
 
 $img: sprite-map('../images/sprite/*.png')

@@ -21,7 +21,8 @@
 }
 
 %tablet-h {
-  @include respond-to(medium-screens) {
+  display: none;
+  @include breakpoint(max-width $breakpoint_large) {
     position: absolute;
     top: $tabletButton-top;
     left: $tabletButton-left;
@@ -33,12 +34,13 @@
     background-color: rgba($lightblue, 0.5);
     transform: rotate(270deg);
   }
-  @include respond-to(handhelds) {
-    display: none;
+  @include breakpoint($breakpoint_medium) {
+    display: block;
   }
   &:before {
-    @include respond-to(medium-screens) {
-      display: none;
+    display: none;
+    @include breakpoint($breakpoint_large) {
+      display: block;
     }
   }
 }
