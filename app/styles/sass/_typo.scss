@@ -21,7 +21,7 @@ aside {
   h2 {
     font: $navTypo;
     font-size: 24px;
-    @include respond-to(handhelds) {
+    @include breakpoint(max-width $breakpoint_medium) {
       text-align: center;
       a {
         color: $gray;
@@ -39,13 +39,13 @@ aside {
   font-weight: bold;
   color: $blue;
   text-transform: uppercase;
-  @include respond-to(medium-screens) {
+  @include breakpoint(max-width $breakpoint_large) {
     text-align: center;
   }
 }
 
 .news {
-  @include respond-to(medium-screens) {
+  @include breakpoint(max-width $breakpoint_large) {
     font-size: 0.9em;
     .tags {
       font-size: 1.1em;
@@ -56,14 +56,14 @@ aside {
 .qu,
 .an,
 .tags {
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     color: $blue;
     font-size: 1em;
   }
 }
 
 .buttons {
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     text-align: center;
   }
 }
@@ -76,10 +76,10 @@ aside {
 }
 
 .social {
-  @include respond-to(medium-screens) {
+  @include breakpoint(max-width $breakpoint_large) {
     text-align: right;
   }
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     text-align: center;
   }
 }
@@ -90,7 +90,7 @@ aside {
   color: $blue;
   font-size: 2em;
   text-align: center;
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     font-size: 1.5em;
   }
 }

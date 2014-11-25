@@ -5,7 +5,7 @@
   width: $fullpage;
   border-bottom: $navBorder;
   background-color: $navBackground;
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     width: 100%;
     min-height: $navHeight;
     border: 0;
@@ -17,7 +17,7 @@
     @extend .resetBox;
     margin: $center;
     text-align: center;
-    @include respond-to(handhelds) {
+    @include breakpoint(max-width $breakpoint_medium) {
       position: absolute;
       display: none;
       width: 100%;
@@ -41,7 +41,7 @@
           text-decoration: none;
         }
       }
-      @include respond-to(handhelds) {
+      @include breakpoint(max-width $breakpoint_medium) {
         display: block;
         width: $fullpage;
         border-bottom: 1px solid #ffffff;
@@ -65,7 +65,7 @@
   margin: $navShowWidth - 5px;
   background: repeating-linear-gradient(rgba(255,255,255, 0.3), rgba(255,255,255, 0.3) 2px, rgba(255,255,255, 0) 2px, rgba(255,255,255, 0) 4px);
   cursor: pointer;
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     display: block;
   }
 }
@@ -90,7 +90,7 @@
       left: $navTriangleLeft - 15%;
     }
   }
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     display: block;
     width: $showAsideW - 5px;
     height: $showAsideH - 15px;
@@ -109,13 +109,13 @@
 
 .show-qu,
 .show-an {
-  @include respond-to(medium-screens) {
+  @include breakpoint(max-width $breakpoint_large) {
     display: block;
   }
 }
 
 .show-an {
-  @include respond-to(medium-screens) {
+  @include breakpoint(max-width $breakpoint_large) {
     float: right;
   }
 }

@@ -18,23 +18,25 @@ header.col-md-12 {
 .news {
   float: right;
   position: relative;
-  @include respond-to(medium-screens) {
+  padding: 0;
+  @include breakpoint($breakpoint_medium) {
     right: auto;
-    padding: 0;
   }
-  @include respond-to(handhelds) {
-    padding: 0;
+  @include breakpoint($breakpoint_large) {
+    padding: 0 15px;
   }
   h3 {
     @extend %aside-buttons;
     }
   p,
   .tags {
-    @include respond-to(medium-screens) {
+    margin: 0;
+    @include breakpoint($breakpoint_medium) {
       padding: 30px 40px;
+      margin: inherit;
     }
-    @include respond-to(handhelds) {
-      margin: 0;
+    @include breakpoint($breakpoint_large) {
+      padding: inherit;
     }
   }
 }
@@ -42,18 +44,27 @@ header.col-md-12 {
 .qu,
 .an,
 .tags {
-  @include respond-to(handhelds) {
+  @include breakpoint(max-width $breakpoint_medium) {
     padding: 15px;
     display: none;
   }
-}
+  @include breakpoint($breakpoint_large) {
+    p {
+      margin: 0 0 10px;
+    }
+  }
+  }
 
 .qu {
-  @include respond-to(medium-screens) {
+  @include breakpoint($breakpoint_medium) {
     position: relative;
     display: none;
   }
-  h3 {
+  @include breakpoint($breakpoint_large) {
+    position: static;
+    display: block;
+  }
+    h3 {
     @extend %tablet-h;
     &:before {
       content: "?";
@@ -62,9 +73,13 @@ header.col-md-12 {
 }
 
 .an {
-  @include respond-to(medium-screens) {
+  @include breakpoint($breakpoint_medium) {
     position: relative;
     display: none;
+  }
+  @include breakpoint($breakpoint_large) {
+    position: static;
+    display: block;
   }
   h3 {
     @extend %tablet-h;
@@ -96,28 +111,30 @@ header.col-md-12 {
 
 
 .container {
-  margin-top: $containerMargin;
-  @include respond-to(medium-screens) {
+  margin-top: 39px;
+  padding: 0;
+  @include breakpoint($breakpoint_medium) {
     width: $fullpage;
     margin-top: 60px;
+    padding: 0 14px;
   }
-  @include respond-to(handhelds) {
-    margin-top: 39px;
-    padding: 0;
+  @include breakpoint($breakpoint_large) {
+    margin-top: $containerMargin;
   }
   label {
     width: $fullpage;
   }
   article {
-    @include respond-to(medium-screens) {
-      position: relative;
+    position: relative;
+    padding-bottom: 30px;
+    @include breakpoint($breakpoint_medium) {
       width: $fullpage - 5%;
       margin-bottom: 50px;
       padding: 0 20px;
     }
-    @include respond-to(handhelds) {
-      position: relative;
-      padding-bottom: 30px;
+    @include breakpoint($breakpoint_large) {
+      position: static;
+      width: auto;
     }
     h2 {
       margin-top: 0;
@@ -156,33 +173,30 @@ header.col-md-12 {
     }
   }
   .right {
-    float: right;
-    @include respond-to(medium-screens) {
-      float: none;
-    }
-    @include respond-to(handhelds) {
-      float: none;
+    float: none;
+    @include breakpoint($breakpoint_large) {
+      float: right;
     }
   }
 }
 
 .social {
   @extend .resetBox;
+  position: absolute;
+  bottom: 0;
   height: $socialHeight;
-  @include respond-to(medium-screens) {
-    position: absolute;
+  @include breakpoint($breakpoint_medium) {
     top: 0;
     right: -70px;
   }
-  @include respond-to(handhelds) {
-    position: absolute;
-    bottom: 0;
+  @include breakpoint($breakpoint_large) {
+    position: static;
   }
   li {
     width: $socialWidth;
     height: $socialHeight;
     display: inline-block;
-    @include respond-to(handhelds) {
+    @include breakpoint(max-width $breakpoint_medium) {
       margin: 0 5px;
     }
   }
